@@ -3,6 +3,7 @@
 
 <head>
   <!-- Normalize.css for better cross-browser consistency -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" src="css/normalize.css" />
   <!-- Main CSS file -->
   <link rel="stylesheet" href="css/styles.css" type="text/css">
@@ -13,29 +14,40 @@
   <!-- Beginning header -->
   <header>
     <!-- Beginning nav -->
-    <nav>
-      <h1><a href="/">Restaurant Reviews</a></h1>
+    <nav id="head">
+      <h1>
+        <a href="/">Restaurant Reviews</a>
+      </h1>
+
     </nav>
     <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
-      <li><a href="/">Home</a></li>
-    </ul>
+
+
     <!-- End breadcrumb -->
     <!-- End nav -->
   </header>
   <!-- End header -->
 
+
+  <nav aria-label="Breadcrumb">
+    <ul id="breadcrumb">
+      <li>
+        <a href="/">Home</a>
+      </li>
+    </ul>
+  </nav>
+
   <!-- Beginning main -->
   <main id="maincontent">
     <!-- Beginning map -->
     <section id="map-container">
-      <div id="map"></div>
+      <div id="map" role="application"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section id="restaurant-container">
-      <h1 id="restaurant-name"></h1>
-      <img id="restaurant-img">
+      <h2 id="restaurant-name"></h2>
+      <img id="restaurant-img" alt="restaurant">
       <p id="restaurant-cuisine"></p>
       <p id="restaurant-address"></p>
       <table id="restaurant-hours"></table>
@@ -43,7 +55,9 @@
     <!-- end restaurant -->
     <!-- Beginning reviews -->
     <section id="reviews-container">
-      <ul id="reviews-list"></ul>
+    
+      <ul id="reviews-list">
+      </ul>
     </section>
     <!-- End reviews -->
   </main>
@@ -51,7 +65,10 @@
 
   <!-- Beginning footer -->
   <footer id="footer">
-    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    Copyright (c) 2017
+    <a href="/">
+      <strong>Restaurant Reviews</strong>
+    </a> All Rights Reserved.
   </footer>
   <!-- End footer -->
 

@@ -1,8 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* 
 html {
     box-sizing: border-box;
+} */
+
+html,body
+{
+    width: 100%;
+    /* height: 100%; */
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
 body,
@@ -105,12 +115,12 @@ nav h1 a {
 }
 
 #breadcrumb {
-    padding: 10px 40px 16px;
+    padding: 1em 2em;
     list-style: none;
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    /* width: calc(50% - 80px); */
 }
 
 /* Display list items side by side */
@@ -208,7 +218,7 @@ nav h1 a {
     min-width: 100%;
 }
 
-#restaurants-list li h1 {
+#restaurants-list li h2 {
     color: #f18200;
     font-family: Arial, sans-serif;
     font-size: 14pt;
@@ -247,7 +257,7 @@ nav h1 a {
 }
 
 .inside #breadcrumb {
-    width: 92%;
+    width: 100%;
 }
 
 body.inside {
@@ -257,7 +267,7 @@ body.inside {
 }
 
 .inside #maincontent {
-    width: 94%;
+    width: 100%;
     padding-right: 4em;
 }
 
@@ -272,13 +282,13 @@ body.inside {
 }
 
 .inside #restaurant-container {
-    width: 100%;
+    width: 90%;
     margin: 0;
-    padding: 1em;
+    /* padding: 1em; */
 }
 
 .inside #reviews-container {
-    width: 100%;
+    width: 80%;
 }
 
 .inside #reviews-list {
@@ -352,6 +362,14 @@ body.inside {
     padding-bottom: 1pt;
 }
 
+#reviews-container h3 {
+    color: #f58500;
+    font-size: 18pt;
+    font-weight: 300;
+    letter-spacing: -1px;
+    padding-bottom: 1pt;
+}
+
 #reviews-list {
     margin: 0;
     padding: 0;
@@ -367,6 +385,7 @@ body.inside {
     padding: 0 20px 20px;
     position: relative;
     width: 85%;
+    max-width: 400px
 }
 
 #reviews-list li p {
@@ -403,6 +422,7 @@ ul#restaurants-list {
 
 ul#restaurants-list li {
     width: 80%;
+    max-width: 400px;
 }
 
 .filter-options {
@@ -447,6 +467,7 @@ ul#restaurants-list li {
     }
     ul#restaurants-list li {
         width: 90vw;
+        max-width: 400px;
     }
     .filter-options {
         display: grid;
@@ -456,3 +477,17 @@ ul#restaurants-list li {
         padding-top: 1em;
     }
 }
+
+body.inside {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+nav[aria-label="Breadcrumb"] {
+    height: 50px;
+    width: 100vw;
+}
+
